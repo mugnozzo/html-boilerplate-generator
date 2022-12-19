@@ -1,3 +1,12 @@
+/*
+	Name: html-boilerplate-generator
+	Author: Alek Mugnozzo (info@mugnozzo.net)
+	Version: 1.0.0
+	File: lib.js (main JavaScript library)
+	License: GPLv3 (see "LICENSE" file)
+	Hosted at: https://github.com/mugnozzo/html-boilerplate-generator
+*/
+
 document.addEventListener("DOMContentLoaded", function(event) { 
 	reload_result();
 });
