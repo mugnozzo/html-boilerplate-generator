@@ -32,7 +32,7 @@ function reload_result(){
 	<body>\n\
 		<div class="main-content">\n\
 			<h1>'+title+'</h1>\n\
-		</div>
+		</div>\n\
 	</body>\n\
 </html>';
 
