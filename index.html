@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./lib.js">
+		</script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<form>
+			<input
+					id="title"
+					name="title"
+					type="text"
+					placeholder="Website title"
+					oninput="reload_result()"/><br/>
+			<input
+					id="description"
+					name="description"
+					type="text"
+					placeholder="Website description"
+					oninput="reload_result()"/><br/>
+			<input
+					id="charset"
+					name="charset"
+					type="text"
+					placeholder=""
+					value="UTF-8"
+					oninput="reload_result()"/><br/>
+			<input
+					id="css"
+					name="css"
+					type="checkbox"
+					onchange="reload_result()"/>
+			<label for="css">CSS stylesheet</label><br/>
+			<input
+					id="favicon"
+					name="favicon"
+					type="checkbox"
+					onchange="reload_result()"/>
+			<label for="css">Favicon</label><br/>
+		</form>
+		<div id="result">
+		</div>
+
+		This code runs directly in your browser, we don't save any information about the boilerplate form.<br/>
+		This is a static web page hosted on mugnozzo.github.io (accessible via domain mugnozzo.xyz). It doesn't collect cookies.
+	</body>
+</html>
