@@ -23,3 +23,6 @@ You can also download the files (remember the license) and host them where you n
 
 ## Usage
 Hopefully you are a developer. In that case the generator is quite simple to use. You will see how the code changes as you fill the text inputs or check/uncheck the checkboxes.
+
+## License
+This project is released uder the GPLv3 license (see the "LICENSE" file or the [online](https://www.gnu.org/licenses/gpl-3.0.en.html) version on the GNU project website).
