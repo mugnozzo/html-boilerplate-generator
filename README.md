@@ -24,5 +24,18 @@ You can also download the files (remember the license) and host them where you n
 ## Usage
 Hopefully you are a developer. In that case the generator is quite simple to use. You will see how the code changes as you fill the text inputs or check/uncheck the checkboxes.
 
+## Current features
+- Title (The text used in the `<title>` tag and in the `<h1>` tag);
+- description (used in the description meta tag);
+- charset (default value: UTF-8, used in the charset meta tag);
+- CSS stylesheet;
+- favicon.
+- Bootstrap (CSS/JS)
+
+## Upcoming features
+- Tailwind;
+- Jquery;
+- Open Graph meta tags.
+
 ## License
 This project is released uder the GPLv3 license (see the "LICENSE" file or the [online](https://www.gnu.org/licenses/gpl-3.0.en.html) version on the GNU project website).

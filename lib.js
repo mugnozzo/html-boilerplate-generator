@@ -1,7 +1,7 @@
 /*
 	Name: html-boilerplate-generator
 	Author: Alek Mugnozzo (info@mugnozzo.net)
-	Version: 1.0.0
+	Version: 1.1.0
 	File: lib.js (main JavaScript library)
 	License: GPLv3 (see "LICENSE" file)
 	Hosted at: https://github.com/mugnozzo/html-boilerplate-generator
@@ -11,48 +11,68 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	reload_result();
 });
 
+var t=document.getElementById.bind(document);
+
 function reload_result(){
-	
-	var title=document.querySelector('#title').value; // TODO: check behavior with html tags and special chars
-	var description=document.querySelector('#description').value;
-	var charset=document.querySelector('#charset').value;
+	var title=t("title"); // TODO: check behavior with html tags and special chars
+	var description=t("description");
+	var charset=t("charset");
+	var css=t("css");
+	var favicon=t("favicon");
+	var bootstrap_css=t("bootstrap-css");
+	var bootstrap_js=t("bootstrap-js");
+
+	// Check checkbox dependencies
+	if(!bootstrap_css.checked){
+		bootstrap_js.checked=false;
+		bootstrap_js.disabled=true;
+	}
+	else bootstrap_js.disabled=false;
 
 	boilerplate='\
 <!DOCTYPE html>\n\
 <html>\n\
 	<head>\n\
-		<title>'+title+'</title>\n\
-		<meta charset="'+charset+'"/>\n\
+		<title>'+title.value+'</title>\n\
+		<meta charset="'+charset.value+'"/>\n\
 		<meta name="viewport" content="width=device-width,initial-scale=1" />\n\
-		<meta name="description" content="'+description+'"/>\n';
+		<meta name="description" content="'+description.value+'"/>\n';
 	
-	if(document.querySelector('input#css:checked')){
-		boilerplate+='\
-		<link rel="stylesheet" type="text/css" href="./style.css"/>\n';
+	if(css.checked){
+		boilerplate+='		<link rel="stylesheet" type="text/css" href="./style.css"/>\n';
 	}
-	
-	if(document.querySelector('input#favicon:checked')){
+	if(favicon.checked){
+		boilerplate+='		<link rel="icon" href="./favicon.png">\n';
+	}
+	if(bootstrap_css.checked){
 		boilerplate+='\
-		<link rel="icon" href="./favicon.png">\n';
+		<link\n\
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"\n\
+			rel="stylesheet"\n\
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"\n\
+			crossorigin="anonymous"/>\n';
+	}
+	if(bootstrap_js.checked){
+		boilerplate+='\
+		<script\n\
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"\n\
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"\n\
+			crossorigin="anonymous"></script>\n';
 	}
 
 	boilerplate+='\
 	</head>\n\
 	<body>\n\
 		<div class="main-content">\n\
-			<h1>'+title+'</h1>\n\
+			<h1>'+title.value+'</h1>\n\
 		</div>\n\
 	</body>\n\
 </html>';
 
 	boilerplate=escapeHtmlEntities(boilerplate);
-
 	boilerplate="<pre>"+boilerplate+"</pre>";
-
 	document.getElementById("result").innerHTML=boilerplate;
 }
-
-if(document.querySelector('input#a:checked')){console.log('a')}else{console.log('non-a')}
 
 function escapeHtmlEntities(str){
 	return str
