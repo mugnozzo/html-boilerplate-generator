@@ -1,12 +1,13 @@
-//*
+/*
 	Name: html-boilerplate-generator
 	Author: Alek Mugnozzo (info@mugnozzo.net)
 	Version: 1.1.0
-	File: style.css (main stylesheet file)
+	File: style.scss (SASS stylesheet source file)
 	License: GPLv3 (see "LICENSE" file)
 	Hosted at: https://github.com/mugnozzo/html-boilerplate-generator
 */
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: sans-serif; }
