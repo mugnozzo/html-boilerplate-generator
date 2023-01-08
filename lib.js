@@ -21,13 +21,18 @@ function reload_result(){
 	var favicon=t("favicon");
 	var bootstrap_css=t("bootstrap-css");
 	var bootstrap_js=t("bootstrap-js");
+	var bootstrap_columns=t("bootstrap-columns");
 
 	// Check checkbox dependencies
 	if(!bootstrap_css.checked){
 		bootstrap_js.checked=false;
 		bootstrap_js.disabled=true;
+		bootstrap_columns.disabled=true;
 	}
-	else bootstrap_js.disabled=false;
+	else{
+		bootstrap_js.disabled=false;
+		bootstrap_columns.disabled=false;
+	}
 
 	boilerplate='\
 <!DOCTYPE html>\n\
@@ -64,7 +69,21 @@ function reload_result(){
 	</head>\n\
 	<body>\n\
 		<div class="main-content">\n\
-			<h1>'+title.value+'</h1>\n\
+			<h1>'+title.value+'</h1>\n';
+	var cols=bootstrap_columns.value;
+	if(bootstrap_columns.disabled==false && cols!=0){
+	boilerplate+='\
+			<div class="row">\n';
+		for(i=1;i<=cols;i++){
+			boilerplate+='\
+				<div class="col">\n\
+					Column '+i+'\n\
+				</div>\n';
+		}
+	boilerplate+='\
+			</div>\n';
+	}
+	boilerplate+='\
 		</div>\n\
 	</body>\n\
 </html>';
