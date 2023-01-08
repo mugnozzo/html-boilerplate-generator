@@ -29,13 +29,14 @@ Hopefully you are a developer. In that case the generator is quite simple to use
 - description (used in the description meta tag);
 - charset (default value: UTF-8, used in the charset meta tag);
 - CSS stylesheet;
-- favicon.
-- Bootstrap (CSS/JS)
+- favicon;
+- Bootstrap (CSS/JS);
+- Bootstrap columns.
 
 ## Upcoming features
 - Tailwind;
 - Jquery;
-- Open Graph meta tags.
+- Open Graph and Twitter meta tags.
 
 ## License
 This project is released uder the GPLv3 license (see the "LICENSE" file or the [online](https://www.gnu.org/licenses/gpl-3.0.en.html) version on the GNU project website).
