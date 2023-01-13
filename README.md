@@ -33,7 +33,7 @@ Hopefully you are a developer. In that case the generator is quite simple to use
 - Bootstrap (CSS/JS);
 - Bootstrap columns.
 
-## Upcoming features
+## Missing features
 - Tailwind;
 - Jquery;
 - Open Graph and Twitter meta tags.
