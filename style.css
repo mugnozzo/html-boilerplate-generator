@@ -11,3 +11,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
+
+.main-container {
+  padding: 10px; }
+
+#result {
+  margin: 20px;
+  padding: 20px;
+  background-color: #000;
+  color: #0f0; }

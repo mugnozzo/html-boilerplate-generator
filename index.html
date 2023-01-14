@@ -14,65 +14,66 @@
 		<link rel="stylesheet" type="text/css" href="./style.css"/>
 	</head>
 	<body>
-		<h1>HTML boilerplate generator</h1>
-		<form>
-			<input
-					id="title"
-					name="title"
-					type="text"
-					placeholder="Website title"
-					oninput="reload_result()"/><br/>
-			<input
-					id="description"
-					name="description"
-					type="text"
-					placeholder="Website description"
-					oninput="reload_result()"/><br/>
-			<input
-					id="charset"
-					name="charset"
-					type="text"
-					placeholder=""
-					value="UTF-8"
-					oninput="reload_result()"/><br/>
-			<input
-					id="css"
-					name="css"
-					type="checkbox"
-					onchange="reload_result()"/>
-			<label for="css">CSS stylesheet</label><br/>
-			<input
-					id="favicon"
-					name="favicon"
-					type="checkbox"
-					onchange="reload_result()"/>
-			<label for="favicon">Favicon</label><br/>
-			<input
-					id="bootstrap-css"
-					name="bootstrap-css"
-					type="checkbox"
-					onchange="reload_result()"/>
-			<label for="bootstrap-css">Bootstrap CSS</label><br/>
-			<input
-					id="bootstrap-js"
-					name="bootstrap-js"
-					type="checkbox"
-					onchange="reload_result()"/>
-			<label for="bootstrap-js">Bootstrap JS</label><br/>
-			<input
-					id="bootstrap-columns"
-					name="bootstrap-columns"
-					type="number"
-					min="0"
-					step="1"
-					onchange="reload_result()"/>
-			<label for="bootstrap-columns">Bootstrap JS</label><br/>
-		</form>
-		<div id="result" readonly>
-		</div>
+		<div class="main-container">
+			<h1>HTML boilerplate generator</h1>
+			<form>
+				<input
+						id="title"
+						name="title"
+						type="text"
+						placeholder="Website title"
+						oninput="reload_result()"/><br/>
+				<input
+						id="description"
+						name="description"
+						type="text"
+						placeholder="Website description"
+						oninput="reload_result()"/><br/>
+				<input
+						id="charset"
+						name="charset"
+						type="text"
+						placeholder=""
+						value="UTF-8"
+						oninput="reload_result()"/><br/>
+				<input
+						id="css"
+						name="css"
+						type="checkbox"
+						onchange="reload_result()"/>
+				<label for="css">CSS stylesheet</label><br/>
+				<input
+						id="favicon"
+						name="favicon"
+						type="checkbox"
+						onchange="reload_result()"/>
+				<label for="favicon">Favicon</label><br/>
+				<input
+						id="bootstrap-css"
+						name="bootstrap-css"
+						type="checkbox"
+						onchange="reload_result()"/>
+				<label for="bootstrap-css">Bootstrap CSS</label><br/>
+				<input
+						id="bootstrap-js"
+						name="bootstrap-js"
+						type="checkbox"
+						onchange="reload_result()"/>
+				<label for="bootstrap-js">Bootstrap JS</label><br/>
+				<input
+						id="bootstrap-columns"
+						name="bootstrap-columns"
+						type="number"
+						min="0"
+						step="1"
+						onchange="reload_result()"/>
+				<label for="bootstrap-columns">Bootstrap columns</label><br/>
+			</form>
+			<div id="result" readonly>
+			</div>
 
-		This code runs JavaScript directly in your browser, client-side. We don't save any information about the boilerplate form.<br/>
-		This is a static web page hosted on mugnozzo.github.io (accessible via domain mugnozzo.xyz). It doesn't collect cookies.<br/>
-		The source code of this project is Free and Open Source Software and it's hosted <a href="https://github.com/mugnozzo/html-boilerplate-generator">here</a>.
+			This code runs JavaScript directly in your browser, client-side. We don't save any information about the boilerplate form.<br/>
+			This is a static web page hosted on mugnozzo.github.io (accessible via domain mugnozzo.xyz). It doesn't collect cookies.<br/>
+			The source code of this project is Free and Open Source Software and it's hosted <a href="https://github.com/mugnozzo/html-boilerplate-generator">here</a>.
 	</body>
 </html>
