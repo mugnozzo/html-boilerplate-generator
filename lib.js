@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 var t=document.getElementById.bind(document);
 
 function reload_result(){
-	var title=t("title"); // TODO: check behavior with html tags and special chars
+	var title=t("title");
 	var description=t("description");
 	var charset=t("charset");
 	var css=t("css");
