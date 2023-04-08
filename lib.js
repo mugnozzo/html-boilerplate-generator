@@ -1,7 +1,7 @@
 /*
 	Name: html-boilerplate-generator
 	Author: Alek Mugnozzo (info@mugnozzo.net)
-	Version: 1.1.0
+	Version: 1.1.1
 	File: lib.js (main JavaScript library)
 	License: GPLv3 (see "LICENSE" file)
 	Hosted at: https://github.com/mugnozzo/html-boilerplate-generator
@@ -100,4 +100,26 @@ function escapeHtmlEntities(str){
 		.replace(/>/g,   '&gt;')
 		.replace(/"/g,   '&quot;')
 		.replace(/'/g,   '&apos;');
+}
+
+function copyResult(){
+	const divToCopy=document.getElementById("result");
+
+	const range=document.createRange();
+	range.selectNode(divToCopy);
+
+	window.getSelection().removeAllRanges();
+	window.getSelection().addRange(range);
+	document.execCommand("copy");
+
+	window.getSelection().removeAllRanges();
+	showPopup();
+}
+
+function showPopup(){
+	document.getElementById("popup-container").classList.remove("hidden");
+}
+
+function hidePopup(){
+	document.getElementById("popup-container").classList.add("hidden");
 }

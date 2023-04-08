@@ -2,7 +2,7 @@
 <!--
 	Name: html-boilerplate-generator
 	Author: Alek Mugnozzo (info@mugnozzo.net)
-	Version: 1.1.0
+		Version: 1.1.1
 	File: index.html (main html file)
 	License: GPLv3 (see "LICENSE" file)
 	Hosted at: https://github.com/mugnozzo/html-boilerplate-generator
@@ -69,11 +69,22 @@
 						onchange="reload_result()"/>
 				<label for="bootstrap-columns">Bootstrap columns</label><br/>
 			</form>
-			<div id="result" readonly>
+			<div id="result-container">
+				<div id="result">
+				</div>
+				<div id="copy-result" onclick="copyResult()">
+					copy
+				</div>
 			</div>
 
 			This code runs JavaScript directly in your browser, client-side. We don't save any information about the boilerplate form.<br/>
 			This is a static web page hosted on mugnozzo.github.io (accessible via domain mugnozzo.xyz). It doesn't collect cookies.<br/>
 			The source code of this project is Free and Open Source Software and it's hosted <a href="https://github.com/mugnozzo/html-boilerplate-generator">here</a>.
+
+			<div id="popup-container" class="hidden" onclick="hidePopup()">
+				<div id="popup-window">
+					Content copied to the clipboard.
+				</div>
+			</div>
 	</body>
 </html>

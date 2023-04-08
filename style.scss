@@ -12,15 +12,51 @@ body{
 	margin:0;
 	padding:0;
 	font-family:sans-serif;
+	font-size:12pt;
 }
 
 .main-container{
 	padding:10px;
 }
 
-#result{
+.hidden{display:none !important;}
+
+#result-container{
+	position:relative;
 	margin:20px;
-	padding:20px;
-	background-color:#000;
-	color:#0f0;
+	#result{
+		padding:20px;
+		background-color:#000;
+		color:#0f0;
+	}
+	#copy-result{
+		position:absolute;
+		top:10px;
+		right:10px;
+		line-height:1.3rem;
+		padding:0 10px;
+		background-color:#aaa;
+		border:1px solid #fff;
+		border-radius:5px;
+		color:#fff;
+	}
+}
+
+#popup-container{
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:rgba(1,1,1,.5);
+	#popup-window{
+		background-color:#fff;
+		color:#aaa;
+		border:1px solid #aaa;
+		border-radius:5px;
+		padding:20px;
+	}
 }
