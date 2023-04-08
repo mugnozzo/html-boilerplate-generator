@@ -18,12 +18,20 @@ function reload_result(){
 	var description=t("description");
 	var charset=t("charset");
 	var css=t("css");
+	var css_dir=t("css-dir");
 	var favicon=t("favicon");
 	var bootstrap_css=t("bootstrap-css");
 	var bootstrap_js=t("bootstrap-js");
 	var bootstrap_columns=t("bootstrap-columns");
 
 	// Check checkbox dependencies
+	if(!css.checked){
+		css_dir.checked=false;
+		css_dir.disabled=true;
+	}
+	else{
+		css_dir.disabled=false;
+	}
 	if(!bootstrap_css.checked){
 		bootstrap_js.checked=false;
 		bootstrap_js.disabled=true;
@@ -44,7 +52,12 @@ function reload_result(){
 		<meta name="description" content="'+description.value+'"/>\n';
 	
 	if(css.checked){
-		boilerplate+='		<link rel="stylesheet" type="text/css" href="./style.css"/>\n';
+		if(css_dir.checked){
+			boilerplate+='		<link rel="stylesheet" type="text/css" href="./style/style.css"/>\n';
+		}
+		else{
+			boilerplate+='		<link rel="stylesheet" type="text/css" href="./style.css"/>\n';
+		}
 	}
 	if(favicon.checked){
 		boilerplate+='		<link rel="icon" href="./favicon.png">\n';
