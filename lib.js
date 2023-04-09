@@ -77,7 +77,7 @@ function reload_result(){
 		}
 	}
 	if(favicon.checked){
-		boilerplate+='		<link rel="icon" href="./favicon.png">\n';
+		boilerplate+='		<link rel="icon" href="./favicon.png"/>\n';
 	}
 	if(bootstrap_css.checked){
 		boilerplate+='\
