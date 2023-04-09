@@ -19,6 +19,8 @@ function reload_result(){
 	var charset=t("charset");
 	var css=t("css");
 	var css_dir=t("css-dir");
+	var js=t("js");
+	var js_dir=t("js-dir");
 	var favicon=t("favicon");
 	var bootstrap_css=t("bootstrap-css");
 	var bootstrap_js=t("bootstrap-js");
@@ -31,6 +33,13 @@ function reload_result(){
 	}
 	else{
 		css_dir.disabled=false;
+	}
+	if(!js.checked){
+		js_dir.checked=false;
+		js_dir.disabled=true;
+	}
+	else{
+		js_dir.disabled=false;
 	}
 	if(!bootstrap_css.checked){
 		bootstrap_js.checked=false;
@@ -53,10 +62,18 @@ function reload_result(){
 	
 	if(css.checked){
 		if(css_dir.checked){
-			boilerplate+='		<link rel="stylesheet" type="text/css" href="./style/style.css"/>\n';
+			boilerplate+='		<link rel="stylesheet" type="text/css" href="./css/style.css"/>\n';
 		}
 		else{
 			boilerplate+='		<link rel="stylesheet" type="text/css" href="./style.css"/>\n';
+		}
+	}
+	if(js.checked){
+		if(js_dir.checked){
+			boilerplate+='		<script src="./js/lib.js"></script>\n';
+		}
+		else{
+			boilerplate+='		<script src="./lib.js"></script>\n';
 		}
 	}
 	if(favicon.checked){
