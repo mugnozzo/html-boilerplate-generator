@@ -28,7 +28,8 @@ body {
   #result-container #result {
     padding: 20px;
     background-color: #000;
-    color: #0f0; }
+    color: #0f0;
+    border-radius: 10px; }
   #result-container #copy-result {
     position: absolute;
     top: 10px;
